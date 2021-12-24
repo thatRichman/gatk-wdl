@@ -39,6 +39,8 @@ task fastq2bam {
         String? readGroup
         Runtime run_params
     }
+
+    String outBAM = "~{readGroup}.unmapped.bam"
     
     command <<<
         set -e
