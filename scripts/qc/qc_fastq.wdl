@@ -45,11 +45,11 @@ task fastq2bam {
         
         gatk --java-options "-Xmx~{run_params.java_mem_gb}g" \
         FastqToSam \
-        -F1=${fastq_1} \
-        -O={outBAM} \
+        -F1=~{fastq_1} \
+        -O=~{outBAM} \
         -SM=~{sample} \
-        {-RG=${readGroup} \
-        {-F2=${fastq_2}
+        -RG=~{readGroup \
+        -F2=~{fastq_2}
     >>> 
 
     runtime {
