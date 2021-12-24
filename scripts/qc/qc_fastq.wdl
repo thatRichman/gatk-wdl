@@ -17,13 +17,17 @@ workflow qcFastq{
 
     Runtime rt = {"gatk_docker": gatk_docker, "java_mem_gb": java_mem_gb}
 
-    call fastq2bam {
+    call fastq2bam as convertedBam{
         input:
             fastq_1 = fastq_1,
             fastq_2 = select_first([fastq_2, ""]),
             sample = sample,
             readGroup = readGroup,
             run_params = rt
+    }
+
+    output {
+        File converted_bam = convertedBam.uBAM
     }
 }
 
