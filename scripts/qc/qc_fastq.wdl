@@ -48,7 +48,7 @@ task fastq2bam {
         -F1=~{fastq_1} \
         -O=~{outBAM} \
         -SM=~{sample} \
-        -RG=~{readGroup \
+        -RG=~{readGroup} \
         -F2=~{fastq_2}
     >>> 
 
