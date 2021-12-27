@@ -1,0 +1,9 @@
+{
+  "qcFastq.gatk_docker": "broadinstitute/gatk:latest",
+  "qcFastq.java_mem_gb": "8",
+  "qcFastq.readGroup": "RG001",
+  "qcFastq.sample": "S001",
+  "qcFastq.fastq_1": "/media/spencer/lstorage/GATK/gatk-wdl/inputs/forward.fastq",
+  "qcFastq.fastq_2": "/media/spencer/lstorage/GATK/gatk-wdl/inputs/reverse.fastq"
+}
+
