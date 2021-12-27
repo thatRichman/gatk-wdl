@@ -7,8 +7,8 @@ struct Runtime {
 
 workflow qcFastq{
     input {
-        String fastq_1
-        String? fastq_2
+        File fastq_1
+        File? fastq_2
         String sample
         String readGroup
         String gatk_docker
@@ -46,8 +46,8 @@ workflow qcFastq{
 
 task fastq2bam_paired {
     input {
-        String fastq_1
-        String fastq_2
+        File fastq_1
+        File fastq_2
         String sample
         String? readGroup
         Runtime run_params
@@ -79,7 +79,7 @@ task fastq2bam_paired {
 
 task fastq2bam_single {
     input {
-        String fastq_1
+        File fastq_1
         String sample
         String? readGroup
         Runtime run_params
